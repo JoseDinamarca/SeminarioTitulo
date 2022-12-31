@@ -32,25 +32,15 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
-              <p>+255 768 356 890</p>
-              <p>info@zpunet.com</p>
+              <p>+569 9984 5665</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
-              <Link to="">
+              <a href="https://www.facebook.com/tuningshoplinares" target="_blank">
                 <i className="fab fa-facebook-f"></i>
-              </Link>
-              <Link to="">
+              </a>
+              <a href="https://www.instagram.com/tuninglinares/" target="_blank">
                 <i className="fab fa-instagram"></i>
-              </Link>
-              <Link to="">
-                <i className="fab fa-linkedin-in"></i>
-              </Link>
-              <Link to="">
-                <i className="fab fa-youtube"></i>
-              </Link>
-              <Link to="">
-                <i className="fab fa-pinterest-p"></i>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -81,7 +71,7 @@ const Header = () => {
                       </button>
                       <div className="dropdown-menu">
                         <Link className="dropdown-item" to="/profile">
-                          Profile
+                          Perfil
                         </Link>
 
                         <Link
@@ -89,7 +79,7 @@ const Header = () => {
                           to="#"
                           onClick={logoutHandler}
                         >
-                          Logout
+                          Cerrar sesión
                         </Link>
                       </div>
                     </div>
@@ -106,11 +96,11 @@ const Header = () => {
                       </button>
                       <div className="dropdown-menu">
                         <Link className="dropdown-item" to="/login">
-                          Login
+                          inicia sesión
                         </Link>
 
                         <Link className="dropdown-item" to="/register">
-                          Register
+                          Crea tu cuenta
                         </Link>
                       </div>
                     </div>
@@ -130,7 +120,7 @@ const Header = () => {
                       onChange={(e) => setKeyword(e.target.value)}
                     />
                     <button type="submit" className="search-button">
-                      search
+                      Buscar
                     </button>
                   </form>
                 </div>
@@ -155,7 +145,7 @@ const Header = () => {
                     onChange={(e) => setKeyword(e.target.value)}
                   />
                   <button type="submit" className="search-button">
-                    search
+                    Buscar
                   </button>
                 </form>
               </div>
@@ -169,11 +159,11 @@ const Header = () => {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      Hi, {userInfo.name}
+                      Bienvenido, {userInfo.name}
                     </button>
                     <div className="dropdown-menu">
                       <Link className="dropdown-item" to="/profile">
-                        Profile
+                        Perfil
                       </Link>
 
                       <Link
@@ -181,14 +171,14 @@ const Header = () => {
                         to="#"
                         onClick={logoutHandler}
                       >
-                        Logout
+                        Cerrar sesión
                       </Link>
                     </div>
                   </div>
                 ) : (
                   <>
-                    <Link to="/register">Register</Link>
-                    <Link to="/login">Login</Link>
+                    <Link to="/register">Crea tu cuenta</Link>
+                    <Link to="/login">Inicia sesión</Link>
                   </>
                 )}
 
