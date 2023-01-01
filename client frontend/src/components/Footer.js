@@ -27,6 +27,16 @@ const Footer = () => {
         <div className="col-12 col-md-4 contact-Box">
           <div className="box-info">
             <div className="info-image">
+            <i class="fa-solid fa-car-side"></i>
+            </div>
+            <h5>Sobre nosotros</h5>
+            <p>Negocio dedicado a la venta de articulos para automovil, repuestos, llantas, etc.</p>
+            <p>El mejor lugar para arreglar tu auto con clase esta en Linares.</p>
+          </div>
+        </div>
+        <div className="col-12 col-md-4 contact-Box">
+          <div className="box-info">
+            <div className="info-image">
               <i className="fas fa-map-marker-alt"></i>
             </div>
             <h5>Nuestra ubicacion</h5>
