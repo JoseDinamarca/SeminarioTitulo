@@ -33,7 +33,7 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
-            <FontAwesomeIcon icon="fa-solid fa-square-phone" />
+              <FontAwesomeIcon icon="fa-solid fa-square-phone" />
               <p> +569 9984 5665</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
@@ -47,9 +47,11 @@ const Header = () => {
           </div>
         </div>
       </div>
+
       {/* Header */}
       <div className="header">
         <div className="container">
+
           {/* MOBILE HEADER */}
           <div className="mobile-header">
             <div className="container ">
@@ -189,6 +191,26 @@ const Header = () => {
                   <span className="badge">{cartItems.length}</span>
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Nav Header */}
+      <div className="nav">
+        <div className="container">
+          <div className="row"> 
+            <div className="col-md-6 d-flex align-items-center display-none">
+            <p> Inicio </p>
+            </div>
+            <div className="col-md-6 d-flex align-items-center display-none">
+            <p> Sobre nosotros </p>
+            </div>
+            <div className="col-md-6 d-flex align-items-center display-none">
+            <p> Horarios </p>
+            </div>
+            <div className="col-md-6 d-flex align-items-center display-none">
+            <p> Donde encontrarnos </p>
             </div>
           </div>
         </div>
