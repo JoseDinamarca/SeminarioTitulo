@@ -1,5 +1,6 @@
 import React from "react";
 import GoogleMapReact from 'google-map-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="col-12 col-md-4 contact-Box">
           <div className="box-info">
             <div className="info-image">
-              <i className="fa-regular fa-clock"></i>
+              <FontAwesomeIcon icon="fa-solid fa-clock" />
             </div>
             <h5>Horarios de atención</h5>
             <div className="justify-content-center d-flex">
@@ -27,7 +28,7 @@ const Footer = () => {
         <div className="col-12 col-md-4 contact-Box">
           <div className="box-info">
             <div className="info-image">
-            <i class="fa-solid fa-car-side"></i>
+              <FontAwesomeIcon icon="fa-solid fa-car-side" />
             </div>
             <h5>Sobre nosotros</h5>
             <p>Negocio dedicado a la venta de articulos para automovil, repuestos, llantas, etc.</p>
@@ -37,7 +38,7 @@ const Footer = () => {
         <div className="col-12 col-md-4 contact-Box">
           <div className="box-info">
             <div className="info-image">
-              <i className="fas fa-map-marker-alt"></i>
+              <FontAwesomeIcon icon="fa-solid fa-location-dot" />
             </div>
             <h5>Nuestra ubicacion</h5>
             <p>Brasil #0196, Linares, Chile</p>

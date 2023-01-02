@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Redux/Actions/userActions";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Header = () => {
   const [keyword, setKeyword] = useState();
@@ -32,14 +33,15 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
-              <p>+569 9984 5665</p>
+            <FontAwesomeIcon icon="fa-solid fa-square-phone" />
+              <p> +569 9984 5665</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
               <a href="https://www.facebook.com/tuningshoplinares" target="_blank">
-                <i className="fab fa-facebook-f"></i>
+                <FontAwesomeIcon icon="fa-brands fa-square-facebook" />
               </a>
               <a href="https://www.instagram.com/tuninglinares/" target="_blank">
-                <i className="fab fa-instagram"></i>
+                <FontAwesomeIcon icon="fa-brands fa-square-instagram" />
               </a>
             </div>
           </div>
@@ -92,7 +94,7 @@ const Header = () => {
                         aria-haspopup="true"
                         aria-expanded="false"
                       >
-                        <i class="fas fa-user"></i>
+                        <FontAwesomeIcon icon="fa-solid fa-user" />
                       </button>
                       <div className="dropdown-menu">
                         <Link className="dropdown-item" to="/login">
@@ -107,7 +109,7 @@ const Header = () => {
                   )}
 
                   <Link to="/cart" className="cart-mobile-icon">
-                    <i className="fas fa-shopping-bag"></i>
+                    <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
                     <span className="badge">{cartItems.length}</span>
                   </Link>
                 </div>
@@ -183,7 +185,7 @@ const Header = () => {
                 )}
 
                 <Link to="/cart">
-                  <i className="fas fa-shopping-bag"></i>
+                  <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
                   <span className="badge">{cartItems.length}</span>
                 </Link>
               </div>
