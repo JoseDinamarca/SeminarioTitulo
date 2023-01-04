@@ -1,5 +1,5 @@
 import React from "react";
-import GoogleMapReact from 'google-map-react';
+import GoogleMaps from "simple-react-google-maps"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
@@ -42,6 +42,14 @@ const Footer = () => {
             </div>
             <h5>Nuestra ubicacion</h5>
             <p>Brasil #0196, Linares, Chile</p>
+            <GoogleMaps
+              apiKey={"AIzaSyCvw1RyNUZyfciKq6V_TXOJjsIHdpKMFyI"}
+              style={{ height:"500px", width:"370px"}}
+              zoom={18}
+              center={{
+                lat: -35.85561846828572,
+                lng: -71.5939696916276
+              }}></GoogleMaps>
           </div>
         </div>
       </div>  
