@@ -15,6 +15,9 @@ import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import NotFound from "./screens/NotFound";
 import PrivateRouter from "./PrivateRouter";
+import Horario from "./screens/Horario";
+import Ubicacion from "./screens/Ubicacion";
+import SobreNosotros from "./screens/SobreNosotros";
 
 const App = () => {
   return (
@@ -23,6 +26,9 @@ const App = () => {
         <Route path="/" component={HomeScreen} exact />
         <Route path="/search/:keyword" component={HomeScreen} exact />
         <Route path="/page/:pagenumber" component={HomeScreen} exact />
+        <Route path="/horario" component={Horario} exact />
+        <Route path="/ubicacion" component={Ubicacion} exact />
+        <Route path="/sobre_nosotros" component={SobreNosotros} exact />
         <Route
           path="/search/:keyword/page/:pageNumber"
           component={HomeScreen}

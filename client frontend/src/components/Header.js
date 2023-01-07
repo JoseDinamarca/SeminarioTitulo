@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Redux/Actions/userActions";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   const [keyword, setKeyword] = useState();
@@ -33,14 +33,22 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
-              <FontAwesomeIcon icon="fa-solid fa-square-phone" />
-              <p> +569 9984 5665</p>
+              <p>
+                <FontAwesomeIcon icon="fa-solid fa-square-phone" /> +569 9984
+                5665
+              </p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
-              <a href="https://www.facebook.com/tuningshoplinares" target="_blank">
+              <a
+                href="https://www.facebook.com/tuningshoplinares"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon="fa-brands fa-square-facebook" />
               </a>
-              <a href="https://www.instagram.com/tuninglinares/" target="_blank">
+              <a
+                href="https://www.instagram.com/tuninglinares/"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon="fa-brands fa-square-instagram" />
               </a>
             </div>
@@ -51,7 +59,6 @@ const Header = () => {
       {/* Header */}
       <div className="header">
         <div className="container">
-
           {/* MOBILE HEADER */}
           <div className="mobile-header">
             <div className="container ">
@@ -199,18 +206,30 @@ const Header = () => {
       {/* Nav Header */}
       <div className="nav">
         <div className="container">
-          <div className="row"> 
-            <div className="col-md-6 d-flex align-items-center display-none">
-            <p> Inicio </p>
+          <div className="row">
+            <div className="col-md-3 d-flex align-items-center display-none">
+              <Link to="/" style={{ color: "white" }}>
+                {" "}
+                Inicio{" "}
+              </Link>
             </div>
-            <div className="col-md-6 d-flex align-items-center display-none">
-            <p> Sobre nosotros </p>
+            <div className="col-md-3 d-flex align-items-center display-none">
+              <Link to="/sobre_nosotros" style={{ color: "white" }}>
+                {" "}
+                Sobre nosotros{" "}
+              </Link>
             </div>
-            <div className="col-md-6 d-flex align-items-center display-none">
-            <p> Horarios </p>
+            <div className="col-md-3 d-flex align-items-center display-none">
+              <Link to="/horario" style={{ color: "white" }}>
+                {" "}
+                Horarios{" "}
+              </Link>
             </div>
-            <div className="col-md-6 d-flex align-items-center display-none">
-            <p> Donde encontrarnos </p>
+            <div className="col-md-3 d-flex align-items-center display-none">
+              <Link to="/ubicacion" style={{ color: "white" }}>
+                {" "}
+                Donde encontrarnos{" "}
+              </Link>
             </div>
           </div>
         </div>
