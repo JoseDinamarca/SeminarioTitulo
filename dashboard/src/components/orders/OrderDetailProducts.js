@@ -19,9 +19,9 @@ const OrderDetailProducts = (props) => {
     <table className="table border table-lg">
       <thead>
         <tr>
-          <th style={{ width: "40%" }}>Product</th>
-          <th style={{ width: "20%" }}>Unit Price</th>
-          <th style={{ width: "20%" }}>Quantity</th>
+          <th style={{ width: "40%" }}>Producto</th>
+          <th style={{ width: "20%" }}>Precio unitario</th>
+          <th style={{ width: "20%" }}>Cantidad</th>
           <th style={{ width: "20%" }} className="text-end">
             Total
           </th>
@@ -56,24 +56,24 @@ const OrderDetailProducts = (props) => {
                 <dt>Subtotal:</dt> <dd>${order.itemsPrice}</dd>
               </dl>
               <dl className="dlist">
-                <dt>Shipping cost:</dt> <dd>${order.shippingPrice}</dd>
+                <dt>Valor de envio:</dt> <dd>${order.shippingPrice}</dd>
               </dl>
               <dl className="dlist">
-                <dt>Grand total:</dt>
+                <dt>Valor total:</dt>
                 <dd>
                   <b className="h5">${order.totalPrice}</b>
                 </dd>
               </dl>
               <dl className="dlist">
-                <dt className="text-muted">Status:</dt>
+                <dt className="text-muted">Estado:</dt>
                 <dd>
                   {order.isPaid ? (
                     <span className="badge rounded-pill alert alert-success text-success">
-                      Payment done
+                      Pagado
                     </span>
                   ) : (
                     <span className="badge rounded-pill alert alert-danger text-danger">
-                      Not Paid
+                      No pagado
                     </span>
                   )}
                 </dd>

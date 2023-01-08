@@ -28,7 +28,7 @@ const AddProductMain = () => {
 
   useEffect(() => {
     if (product) {
-      toast.success("Product Added", ToastObjects);
+      toast.success("Producto agregado", ToastObjects);
       dispatch({ type: PRODUCT_CREATE_RESET });
       setName("");
       setDescription("");
@@ -52,10 +52,10 @@ const AddProductMain = () => {
             <Link to="/products" className="btn btn-danger text-white">
               Go to products
             </Link>
-            <h2 className="content-title">Add product</h2>
+            <h2 className="content-title">Agregar producto</h2>
             <div>
               <button type="submit" className="btn btn-primary">
-                Publish now
+                Ingresar
               </button>
             </div>
           </div>

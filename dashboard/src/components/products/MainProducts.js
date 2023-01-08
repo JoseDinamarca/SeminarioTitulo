@@ -22,10 +22,10 @@ const MainProducts = () => {
   return (
     <section className="content-main">
       <div className="content-header">
-        <h2 className="content-title">Products</h2>
+        <h2 className="content-title">Productos</h2>
         <div>
           <Link to="/addproduct" className="btn btn-primary">
-            Create new
+            Añadir producto
           </Link>
         </div>
       </div>
@@ -46,13 +46,6 @@ const MainProducts = () => {
                 <option>Electronics</option>
                 <option>Clothings</option>
                 <option>Something else</option>
-              </select>
-            </div>
-            <div className="col-lg-2 col-6 col-md-3">
-              <select className="form-select">
-                <option>Latest added</option>
-                <option>Cheap first</option>
-                <option>Most viewed</option>
               </select>
             </div>
           </div>

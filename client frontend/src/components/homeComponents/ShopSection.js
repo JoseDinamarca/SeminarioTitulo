@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProduct } from "../../Redux/Actions/ProductActions";
 import Loading from "../LoadingError/Loading";
 import Message from "../LoadingError/Error";
+import Sidebar from "../sidebar";
 
 const ShopSection = (props) => {
   const { keyword, pagenumber } = props;
@@ -19,7 +20,8 @@ const ShopSection = (props) => {
   }, [dispatch, keyword, pagenumber]);
   return (
     <>
-      <div className="container">
+    <Sidebar />
+      <div className="container" style={{ marginLeft: "235px"}}>
         <div className="section">
           <div className="row">
             <div className="col-lg-12 col-md-12 article">

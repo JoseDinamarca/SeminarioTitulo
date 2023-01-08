@@ -665,3 +665,127 @@ textarea:focus {
   background-color: black;
   border: 1px solid black;
 }
+
+/* Sidebar */
+.main-wrap {
+  background-color: #f8f9fa;
+}
+
+.content-main {
+  padding: 30px 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-aside {
+  max-width: 260px;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  z-index: 10;
+  margin-top: 296px;
+}
+.navbar-aside .aside-top {
+  padding: 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-aside .aside-top .brand-wrap {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: inline-block;
+}
+.navbar-aside .aside-top .logo {
+  height: 46px;
+  width: auto;
+  max-width: 200px;
+}
+
+.menu-aside {
+  list-style: none;
+  margin: 0.5rem;
+  padding: 0;
+}
+.menu-aside a {
+  display: block;
+  text-decoration: none;
+}
+.menu-aside .menu-item {
+  margin-bottom: 5px;
+}
+.menu-aside .menu-item .icon {
+  color: #adb5bd;
+  margin-right: 10px;
+  font-size: 18px;
+}
+.menu-aside .active .icon {
+  color: #0050fd;
+}
+.menu-aside .active {
+  background-color: #ebf0fd;
+}
+.menu-aside .menu-link {
+  padding: 10px;
+  color: #29335d;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-aside .menu-link .text {
+  vertical-align: middle;
+}
+.menu-aside .menu-link:hover {
+  transition: 0.2s linear;
+  background-color: #e9ecef;
+}
+.menu-aside .submenu {
+  margin-left: 44px;
+  display: none;
+}
+.menu-aside .submenu a {
+  color: #6c757d;
+  padding: 5px;
+}
+.menu-aside .submenu a:hover {
+  color: #000;
+}
+.menu-aside .menu-item.active .submenu {
+  display: block;
+}
+.menu-aside .menu-item.has-submenu > .menu-link:after {
+  display: inline-block;
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  margin-top: 0.6em;
+  vertical-align: middle;
+  content: "";
+  border-top: 5px solid #adb5bd;
+  border-right: 5px solid transparent;
+  border-bottom: 0;
+  border-left: 5px solid transparent;
+}
+
+.test{
+    list-style: none;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    margin: auto;
+    width: 50%;
+}
