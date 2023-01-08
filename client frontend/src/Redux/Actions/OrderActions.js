@@ -122,6 +122,43 @@ export const payOrder =
     }
   };
 
+//SIMULADOR DE PAGO
+export const simulacion =
+  (order) => async (dispatch, getState) => {
+    try {
+      dispatch({ type: ORDER_PAY_REQUEST });
+  
+      const {
+        userLogin: { userInfo },
+      } = getState();
+  
+      const config = {
+        headers: {
+          Authorization: `Bearer ${userInfo.token}`,
+        },
+      };
+  
+      const { data } = await axios.put(
+        `/api/orders/${order._id}/pay`,
+        {},
+        config
+      );
+      dispatch({ type: ORDER_PAY_SUCCESS, payload: data });
+    } catch (error) {
+      const message =
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message;
+      if (message === "Not authorized, token failed") {
+        dispatch(logout());
+      }
+      dispatch({
+        type: ORDER_PAY_FAIL,
+        payload: message,
+      });
+    }
+  };
+  
 // USER ORDERS
 export const listMyOrders = () => async (dispatch, getState) => {
   try {

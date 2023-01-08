@@ -15,7 +15,7 @@ const Orders = (props) => {
         <>
           {orders.length === 0 ? (
             <div className="col-12 alert alert-info text-center mt-3">
-              No Orders
+              Sin Compras
               <Link
                 className="btn btn-success mx-2 px-3 py-2"
                 to="/"
@@ -23,7 +23,7 @@ const Orders = (props) => {
                   fontSize: "12px",
                 }}
               >
-                START SHOPPING
+                Empezar a comprar
               </Link>
             </div>
           ) : (
@@ -31,10 +31,10 @@ const Orders = (props) => {
               <table className="table">
                 <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>STATUS</th>
-                    <th>DATE</th>
-                    <th>TOTAL</th>
+                    <th>ID de compra</th>
+                    <th>Estado</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -50,7 +50,7 @@ const Orders = (props) => {
                           {order._id}
                         </a>
                       </td>
-                      <td>{order.isPaid ? <>Paid</> : <>Not Paid</>}</td>
+                      <td>{order.isPaid ? <>Pagado</> : <>Sin pago</>}</td>
                       <td>
                         {order.isPaid
                           ? moment(order.paidAt).calendar()
