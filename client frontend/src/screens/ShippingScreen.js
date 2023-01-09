@@ -58,7 +58,7 @@ const ShippingScreen = ({ history }) => {
             required
             onChange={(e) => setCountry(e.target.value)}
           />
-          <button type="submit">Continue</button>
+          <button type="submit">Continuar</button>
         </form>
       </div>
     </>
@@ -66,3 +66,5 @@ const ShippingScreen = ({ history }) => {
 };
 
 export default ShippingScreen;
+
+//purgar ventana

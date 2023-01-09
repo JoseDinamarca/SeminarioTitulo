@@ -68,7 +68,7 @@ const PlaceOrderScreen = ({ history }) => {
               </div>
               <div className="col-md-8 center">
                 <h5>
-                  <strong>Customer</strong>
+                  <strong>Cliente</strong>
                 </h5>
                 <p>{userInfo.name}</p>
                 <p>{userInfo.email}</p>
@@ -85,10 +85,10 @@ const PlaceOrderScreen = ({ history }) => {
               </div>
               <div className="col-md-8 center">
                 <h5>
-                  <strong>Order info</strong>
+                  <strong>Informacion de compra</strong>
                 </h5>
-                <p>Shipping: {cart.shippingAddress.country}</p>
-                <p>Pay method: {cart.paymentMethod}</p>
+                <p>Envio: {cart.shippingAddress.country}</p>
+                <p>Metodo de pago: {cart.paymentMethod}</p>
               </div>
             </div>
           </div>
@@ -102,10 +102,10 @@ const PlaceOrderScreen = ({ history }) => {
               </div>
               <div className="col-md-8 center">
                 <h5>
-                  <strong>Deliver to</strong>
+                  <strong>Entrega</strong>
                 </h5>
                 <p>
-                  Address: {cart.shippingAddress.city},{" "}
+                  Direccion: {cart.shippingAddress.city},{" "}
                   {cart.shippingAddress.address},{" "}
                   {cart.shippingAddress.postalCode}
                 </p>
@@ -117,7 +117,7 @@ const PlaceOrderScreen = ({ history }) => {
         <div className="row order-products justify-content-between">
           <div className="col-lg-8">
             {cart.cartItems.length === 0 ? (
-              <Message variant="alert-info mt-5">Your cart is empty</Message>
+              <Message variant="alert-info mt-5">Tu carro esta vacio</Message>
             ) : (
               <>
                 {cart.cartItems.map((item, index) => (
@@ -131,11 +131,11 @@ const PlaceOrderScreen = ({ history }) => {
                       </Link>
                     </div>
                     <div className="mt-3 mt-md-0 col-md-2 col-6  d-flex align-items-center flex-column justify-content-center ">
-                      <h4>QUANTITY</h4>
+                      <h4>Cantidad</h4>
                       <h6>{item.qty}</h6>
                     </div>
                     <div className="mt-3 mt-md-0 col-md-2 col-6 align-items-end  d-flex flex-column justify-content-center ">
-                      <h4>SUBTOTAL</h4>
+                      <h4>Subtotal</h4>
                       <h6>${item.qty * item.price}</h6>
                     </div>
                   </div>
@@ -149,19 +149,19 @@ const PlaceOrderScreen = ({ history }) => {
               <tbody>
                 <tr>
                   <td>
-                    <strong>Products</strong>
+                    <strong>Productos</strong>
                   </td>
                   <td>${cart.itemsPrice}</td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>Shipping</strong>
+                    <strong>Entrega</strong>
                   </td>
                   <td>${cart.shippingPrice}</td>
                 </tr>
                 <tr>
                   <td>
-                    <strong>Tax</strong>
+                    <strong>Impuesto</strong>
                   </td>
                   <td>${cart.taxPrice}</td>
                 </tr>
@@ -175,7 +175,7 @@ const PlaceOrderScreen = ({ history }) => {
             </table>
             {cart.cartItems.length === 0 ? null : (
               <button type="submit" onClick={placeOrderHandler}>
-                PLACE ORDER
+                Realizar compra
               </button>
             )}
             {error && (

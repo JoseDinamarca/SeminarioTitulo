@@ -79,15 +79,15 @@ const SingleProduct = ({ history, match }) => {
 
                   <div className="product-count col-lg-7 ">
                     <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Price</h6>
+                      <h6>Valor</h6>
                       <span>${product.price}</span>
                     </div>
                     <div className="flex-box d-flex justify-content-between align-items-center">
-                      <h6>Status</h6>
+                      <h6>Estado</h6>
                       {product.countInStock > 0 ? (
-                        <span>In Stock</span>
+                        <span>Disponible</span>
                       ) : (
-                        <span>unavailable</span>
+                        <span>Agotado</span>
                       )}
                     </div>
                     <div className="flex-box d-flex justify-content-between align-items-center">
@@ -100,7 +100,7 @@ const SingleProduct = ({ history, match }) => {
                     {product.countInStock > 0 ? (
                       <>
                         <div className="flex-box d-flex justify-content-between align-items-center">
-                          <h6>Quantity</h6>
+                          <h6>Cantidad</h6>
                           <select
                             value={qty}
                             onChange={(e) => setQty(e.target.value)}
@@ -118,7 +118,7 @@ const SingleProduct = ({ history, match }) => {
                           onClick={AddToCartHandle}
                           className="round-black-btn"
                         >
-                          Add To Cart
+                          Añadir al carro
                         </button>
                       </>
                     ) : null}
@@ -130,9 +130,9 @@ const SingleProduct = ({ history, match }) => {
             {/* RATING */}
             <div className="row my-5">
               <div className="col-md-6">
-                <h6 className="mb-3">REVIEWS</h6>
+                <h6 className="mb-3">Reviews</h6>
                 {product.reviews.length === 0 && (
-                  <Message variant={"alert-info mt-3"}>No Reviews</Message>
+                  <Message variant={"alert-info mt-3"}>Sin reviews</Message>
                 )}
                 {product.reviews.map((review) => (
                   <div
@@ -149,7 +149,7 @@ const SingleProduct = ({ history, match }) => {
                 ))}
               </div>
               <div className="col-md-6">
-                <h6>WRITE A CUSTOMER REVIEW</h6>
+                <h6>Escribir un review</h6>
                 <div className="my-4">
                   {loadingCreateReview && <Loading />}
                   {errorCreateReview && (
@@ -161,22 +161,22 @@ const SingleProduct = ({ history, match }) => {
                 {userInfo ? (
                   <form onSubmit={submitHandler}>
                     <div className="my-4">
-                      <strong>Rating</strong>
+                      <strong>Calificacion</strong>
                       <select
                         value={rating}
                         onChange={(e) => setRating(e.target.value)}
                         className="col-12 bg-light p-3 mt-2 border-0 rounded"
                       >
-                        <option value="">Select...</option>
-                        <option value="1">1 - Poor</option>
-                        <option value="2">2 - Fair</option>
-                        <option value="3">3 - Good</option>
-                        <option value="4">4 - Very Good</option>
-                        <option value="5">5 - Excellent</option>
+                        <option value="">Seleccionar...</option>
+                        <option value="1">1 - Malo</option>
+                        <option value="2">2 - Mediocre</option>
+                        <option value="3">3 - Bueno</option>
+                        <option value="4">4 - Muy bueno</option>
+                        <option value="5">5 - Excelente</option>
                       </select>
                     </div>
                     <div className="my-4">
-                      <strong>Comment</strong>
+                      <strong>Comentario</strong>
                       <textarea
                         row="3"
                         value={comment}
@@ -189,18 +189,18 @@ const SingleProduct = ({ history, match }) => {
                         disabled={loadingCreateReview}
                         className="col-12 bg-black border-0 p-3 rounded text-white"
                       >
-                        SUBMIT
+                        Ingresar
                       </button>
                     </div>
                   </form>
                 ) : (
                   <div className="my-3">
                     <Message variant={"alert-warning"}>
-                      Please{" "}
+                      Por favor {" "}
                       <Link to="/login">
-                        " <strong>Login</strong> "
+                        " <strong>Inicie sesión</strong> "
                       </Link>{" "}
-                      to write a review{" "}
+                      para escribir un review del producto{" "}
                     </Message>
                   </div>
                 )}

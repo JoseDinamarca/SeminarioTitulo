@@ -51,3 +51,5 @@ const PaymentScreen = ({ history }) => {
 };
 
 export default PaymentScreen;
+
+//purgar ventana
