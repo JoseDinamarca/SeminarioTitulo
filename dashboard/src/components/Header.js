@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <header className="main-header navbar">
-      <div className="col-nav">
+      <div className="col-nav" style = {{ marginLeft: "auto" }}>
         <button
           className="btn btn-icon btn-mobile me-auto"
           data-trigger="#offcanvas_aside"
@@ -48,9 +48,6 @@ const Header = () => {
               />
             </Link>
             <div className="dropdown-menu dropdown-menu-end">
-              <Link className="dropdown-item" to="/">
-                Perfil
-              </Link>
               <Link
                 onClick={logoutHandler}
                 className="dropdown-item text-danger"
