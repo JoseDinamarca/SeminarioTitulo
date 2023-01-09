@@ -174,7 +174,7 @@ body.offcanvas-active {
   bottom: 0;
   width: 100%;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: rgb(219, 218, 218);
   box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.075);
   z-index: 10;
   border-right: 1px solid rgba(108, 117, 125, 0.25);
@@ -200,7 +200,7 @@ body.offcanvas-active {
   padding-left: 3%;
   padding-right: 3%;
   min-height: 72px;
-  background-color: #fff;
+  background-color: rgb(233, 233, 233);
   border-bottom: 1px solid rgba(108, 117, 125, 0.25);
 }
 .main-header .nav {

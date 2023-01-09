@@ -16,19 +16,15 @@ const PlaceOrderScreen = ({ history }) => {
 
   // Calculate Price
   const addDecimals = (num) => {
-    return (Math.round(num * 100) / 100).toFixed(2);
+    return (Math.round(num * 100) / 100).toFixed(0);
   };
 
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
-  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
-  cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)));
   cart.totalPrice = (
-    Number(cart.itemsPrice) +
-    Number(cart.shippingPrice) +
-    Number(cart.taxPrice)
-  ).toFixed(2);
+    Number(cart.itemsPrice)
+  ).toFixed(0);
 
   const orderCreate = useSelector((state) => state.orderCreate);
   const { order, success, error } = orderCreate;
@@ -47,8 +43,6 @@ const PlaceOrderScreen = ({ history }) => {
         shippingAddress: cart.shippingAddress,
         paymentMethod: cart.paymentMethod,
         itemsPrice: cart.itemsPrice,
-        shippingPrice: cart.shippingPrice,
-        taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
       })
     );
@@ -85,10 +79,9 @@ const PlaceOrderScreen = ({ history }) => {
               </div>
               <div className="col-md-8 center">
                 <h5>
-                  <strong>Informacion de compra</strong>
+                  <strong>Información de compra</strong>
                 </h5>
-                <p>Envio: {cart.shippingAddress.country}</p>
-                <p>Metodo de pago: {cart.paymentMethod}</p>
+                <p>Método de pago: {cart.paymentMethod}</p>
               </div>
             </div>
           </div>
@@ -105,9 +98,8 @@ const PlaceOrderScreen = ({ history }) => {
                   <strong>Entrega</strong>
                 </h5>
                 <p>
-                  Direccion: {cart.shippingAddress.city},{" "}
+                  Dirección: {cart.shippingAddress.city},{" "}
                   {cart.shippingAddress.address},{" "}
-                  {cart.shippingAddress.postalCode}
                 </p>
               </div>
             </div>
@@ -117,7 +109,7 @@ const PlaceOrderScreen = ({ history }) => {
         <div className="row order-products justify-content-between">
           <div className="col-lg-8">
             {cart.cartItems.length === 0 ? (
-              <Message variant="alert-info mt-5">Tu carro esta vacio</Message>
+              <Message variant="alert-info mt-5">Tu carro esta vacío</Message>
             ) : (
               <>
                 {cart.cartItems.map((item, index) => (
@@ -157,13 +149,7 @@ const PlaceOrderScreen = ({ history }) => {
                   <td>
                     <strong>Entrega</strong>
                   </td>
-                  <td>${cart.shippingPrice}</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Impuesto</strong>
-                  </td>
-                  <td>${cart.taxPrice}</td>
+                  <td>$0</td>
                 </tr>
                 <tr>
                   <td>

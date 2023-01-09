@@ -17,7 +17,8 @@ const SobreNosotros = () => {
             </div>
 
             <h5>Sobre nosotros</h5>
-            <div className="justify-content-center d-flex">
+            <div className="justify-content-center d-flex"style={{marginLeft: "50px", marginRight: "50px"}}>
+              
               <text>
                 Negocio dedicado a la venta de articulos para automovil,
                 repuestos, llantas, etc.

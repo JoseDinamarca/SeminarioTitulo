@@ -30,20 +30,20 @@ const PaymentScreen = ({ history }) => {
           className="Login2 col-md-8 col-lg-4 col-11"
           onSubmit={submitHandler}
         >
-          <h6>SELECT PAYMENT METHOD</h6>
+          <h6>Selecciona método de pago</h6>
           <div className="payment-container">
             <div className="radio-container">
               <input
                 className="form-check-input"
                 type="radio"
+                checked="checked"
                 value={paymentMethod}
                 onChange={(e) => setPaymentMethod(e.target.value)}
               />
-              <label className="form-check-label">PayPal or Credit Card</label>
+              <label className="form-check-label">PayPal o tarjeta de crédito</label>
             </div>
           </div>
-
-          <button type="submit">Continue</button>
+          <button type="submit">Continuar</button>
         </form>
       </div>
     </>
@@ -51,5 +51,3 @@ const PaymentScreen = ({ history }) => {
 };
 
 export default PaymentScreen;
-
-//purgar ventana

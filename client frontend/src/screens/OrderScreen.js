@@ -23,7 +23,7 @@ const OrderScreen = ({ match }) => {
 
   if (!loading) {
     const addDecimals = (num) => {
-      return (Math.round(num * 100) / 100).toFixed(2);
+      return (Math.round(num * 100) / 100).toFixed(0);
     };
 
     order.itemsPrice = addDecimals(
@@ -104,10 +104,9 @@ const OrderScreen = ({ match }) => {
                   </div>
                   <div className="col-md-8 center">
                     <h5>
-                      <strong>Informacion de compra</strong>
+                      <strong>Información de compra</strong>
                     </h5>
-                    <p>Envio: {order.shippingAddress.country}</p>
-                    <p>Metodo de pago: {order.paymentMethod}</p>
+                    <p>Método de pago: {order.paymentMethod}</p>
                     {order.isPaid ? (
                       <div className="bg-info p-2 col-12">
                         <p className="text-white text-center text-sm-start">
@@ -137,9 +136,8 @@ const OrderScreen = ({ match }) => {
                       <strong>Entrega</strong>
                     </h5>
                     <p>
-                      Direccion: {order.shippingAddress.city},{" "}
+                      Dirección: {order.shippingAddress.city},{" "}
                       {order.shippingAddress.address},{" "}
-                      {order.shippingAddress.postalCode}
                     </p>
                     {order.isDelivered ? (
                       <div className="bg-info p-2 col-12">
@@ -163,7 +161,7 @@ const OrderScreen = ({ match }) => {
               <div className="col-lg-8">
                 {order.orderItems.length === 0 ? (
                   <Message variant="alert-info mt-5">
-                    Tu carro esta vacio
+                    Tu carro esta vacío
                   </Message>
                 ) : (
                   <>
@@ -205,12 +203,6 @@ const OrderScreen = ({ match }) => {
                         <strong>Entrega</strong>
                       </td>
                       <td>${order.shippingPrice}</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong>Impuesto</strong>
-                      </td>
-                      <td>${order.taxPrice}</td>
                     </tr>
                     <tr>
                       <td>

@@ -13,7 +13,7 @@ const Orders = (props) => {
           <th scope="col">Total</th>
           <th scope="col">Estado de pago</th>
           <th scope="col">Fecha de compra</th>
-          <th>Estado de envio</th>
+          <th>Estado de envío</th>
           <th scope="col" className="text-end">
             Detalle
           </th>

@@ -24,9 +24,9 @@ const OrderDetailInfo = (props) => {
             <i className="text-success fas fa-truck-moving"></i>
           </span>
           <div className="text">
-            <h6 className="mb-1">Informacion de compra</h6>
+            <h6 className="mb-1">Información de compra</h6>
             <p className="mb-1">
-              Envio: {order.shippingAddress.country} <br /> Metodo de pago:{" "}
+              Método de pago:{" "}
               {order.paymentMethod}
             </p>
           </div>
@@ -38,12 +38,11 @@ const OrderDetailInfo = (props) => {
             <i className="text-success fas fa-map-marker-alt"></i>
           </span>
           <div className="text">
-            <h6 className="mb-1">Direccion de envio</h6>
+            <h6 className="mb-1">Dirección de envío</h6>
             <p className="mb-1">
-              Direccion: {order.shippingAddress.city}
+              Dirección: {order.shippingAddress.city}
               <br />
               {order.shippingAddress.address}
-              <br /> {order.shippingAddress.postalCode}
             </p>
           </div>
         </article>

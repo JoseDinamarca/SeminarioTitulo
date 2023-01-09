@@ -56,7 +56,7 @@ const OrderDetailProducts = (props) => {
                 <dt>Subtotal:</dt> <dd>${order.itemsPrice}</dd>
               </dl>
               <dl className="dlist">
-                <dt>Valor de envio:</dt> <dd>${order.shippingPrice}</dd>
+                <dt>Valor de envío:</dt> <dd>${order.shippingPrice}</dd>
               </dl>
               <dl className="dlist">
                 <dt>Valor total:</dt>
