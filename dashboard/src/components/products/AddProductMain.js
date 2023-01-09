@@ -16,6 +16,7 @@ const ToastObjects = {
 };
 const AddProductMain = () => {
   const [name, setName] = useState("");
+  const [categoria, setCategoria] = useState("");
   const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
   const [countInStock, setCountInStock] = useState(0);
@@ -31,6 +32,7 @@ const AddProductMain = () => {
       toast.success("Producto agregado", ToastObjects);
       dispatch({ type: PRODUCT_CREATE_RESET });
       setName("");
+      setCategoria("");
       setDescription("");
       setCountInStock(0);
       setImage("");
@@ -40,7 +42,7 @@ const AddProductMain = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(createProduct(name, price, description, image, countInStock));
+    dispatch(createProduct(name + " " + categoria, price, description, image, countInStock));
   };
 
   return (
@@ -72,7 +74,7 @@ const AddProductMain = () => {
                     </label>
                     <input
                       type="text"
-                      placeholder="Ingrese aca el nombre del producto..."
+                      placeholder="Ingrese acá el nombre del producto..."
                       className="form-control"
                       id="product_title"
                       required
@@ -81,12 +83,25 @@ const AddProductMain = () => {
                     />
                   </div>
                   <div className="mb-4">
+                    <label htmlFor="product_categoria" className="form-label">
+                      Categoría
+                    </label>
+                    <select
+                    className="form-control"
+                    onChange={(e) => setCategoria(e.target.value)}>
+                      <option value="0" disabled selected>Seleccione categoría...</option>
+                      <option value="[BAT]">Baterías</option>
+                      <option value="[OIL]">Lubricantes</option>
+                      <option value="[ACC]">Accesorios</option>
+                    </select>
+                  </div>
+                  <div className="mb-4">
                     <label htmlFor="product_price" className="form-label">
                       Valor
                     </label>
                     <input
                       type="number"
-                      placeholder="Type here"
+                      placeholder="Precio del producto..."
                       className="form-control"
                       id="product_price"
                       required
@@ -100,7 +115,7 @@ const AddProductMain = () => {
                     </label>
                     <input
                       type="number"
-                      placeholder="Type here"
+                      placeholder="Stock del producto..."
                       className="form-control"
                       id="product_price"
                       required
@@ -111,7 +126,7 @@ const AddProductMain = () => {
                   <div className="mb-4">
                     <label className="form-label">Descripción</label>
                     <textarea
-                      placeholder="Ingrese una descripcion..."
+                      placeholder="Ingrese una descripción..."
                       className="form-control"
                       rows="7"
                       required

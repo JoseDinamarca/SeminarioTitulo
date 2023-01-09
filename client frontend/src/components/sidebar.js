@@ -19,7 +19,7 @@ const Sidebar = () => {
               <NavLink
                 activeClassName="active"
                 className="menu-link"
-                to="/search/batería"
+                to="/search/bat"
                 exact={true}
               >
                 <span className="text">Baterías</span>
@@ -29,7 +29,7 @@ const Sidebar = () => {
               <NavLink
                 activeClassName="active"
                 className="menu-link"
-                to="/search/lubricantes"
+                to="/search/oil"
               >
                 <span className="text">Lubricantes</span>
               </NavLink>
@@ -38,7 +38,7 @@ const Sidebar = () => {
               <NavLink
                 activeClassName="active"
                 className="menu-link"
-                to="/search/accesorios"
+                to="/search/acc"
               >
                 <span className="text">Accesorios</span>
               </NavLink>

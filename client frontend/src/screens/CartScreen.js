@@ -13,7 +13,7 @@ const CartScreen = ({ match, location, history }) => {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  const total = cartItems.reduce((a, i) => a + i.qty * i.price, 0).toFixed(2);
+  const total = cartItems.reduce((a, i) => a + i.qty * i.price, 0).toFixed(0);
 
   useEffect(() => {
     if (productId) {

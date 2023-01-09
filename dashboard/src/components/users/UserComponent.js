@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { listUser } from "../../Redux/Actions/userActions";
 import Loading from "../LoadingError/Loading";
@@ -22,17 +21,7 @@ const UserComponent = () => {
         </div>
       </div>
       <div className="card mb-4">
-        <header className="card-header">
-          <div className="row gx-3">
-            <div className="col-lg-4 col-md-6 me-auto">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="form-control"
-              />
-            </div>
-          </div>
-        </header>
+        
 
         {/* Card */}
         <div className="card-body">
@@ -72,26 +61,7 @@ const UserComponent = () => {
             </div>
           )}
 
-          {/* nav */}
-          <nav className="float-end mt-4" aria-label="Page navigation">
-            <ul className="pagination">
-              <li className="page-item disabled">
-                <Link className="page-link" to="#">
-                  Previous
-                </Link>
-              </li>
-              <li className="page-item active">
-                <Link className="page-link" to="#">
-                  1
-                </Link>
-              </li>
-              <li className="page-item">
-                <Link className="page-link" to="#">
-                  Next
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          
         </div>
       </div>
     </section>
