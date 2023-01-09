@@ -21,6 +21,19 @@ const userSchema = mongoose.Schema(
       required: true,
       default: false,
     },
+    telefono: {
+      type: String,
+      required: true,
+    },
+    direccion: {
+      type: String,
+      required: true,
+    },
+    rut: {
+      type: String,
+      required: true,
+      unique: true,
+    }
   },
   {
     timestamps: true,

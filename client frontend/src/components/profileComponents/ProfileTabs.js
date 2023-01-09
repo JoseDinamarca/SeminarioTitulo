@@ -11,6 +11,9 @@ const ProfileTabs = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [direccion, setDireccion] = useState("");
+  const [rut, setRut] = useState("");
   const toastId = React.useRef(null);
 
   const Toastobjects = {
@@ -32,6 +35,9 @@ const ProfileTabs = () => {
     if (user) {
       setName(user.name);
       setEmail(user.email);
+      setTelefono(user.telefono);
+      setDireccion(user.direccion);
+      setRut(user.rut);
     }
   }, [dispatch, user]);
 
@@ -56,6 +62,17 @@ const ProfileTabs = () => {
       {loading && <Loading />}
       {updateLoading && <Loading />}
       <form className="row  form-container" onSubmit={submitHandler}>
+      <div className="col-md-6">
+          <div className="form">
+            <label for="account-confirm-pass">Rut</label>
+            <input
+              className="form-control"
+              type="text"
+              value={rut}
+              onChange={(e) => setRut(e.target.value)}
+            />
+          </div>
+        </div>
         <div className="col-md-6">
           <div className="form">
             <label for="account-fn">Nombre de usuario</label>
@@ -68,10 +85,9 @@ const ProfileTabs = () => {
             />
           </div>
         </div>
-
         <div className="col-md-6">
           <div className="form">
-            <label for="account-email">Correo electronico</label>
+            <label for="account-email">Correo electrónico</label>
             <input
               className="form-control"
               type="email"
@@ -81,6 +97,17 @@ const ProfileTabs = () => {
             />
           </div>
         </div>
+        <div className="col-md-6">
+          <div className="form">
+            <label for="account-confirm-pass">Teléfono</label>
+            <input
+              className="form-control"
+              type="text"
+              value={telefono}
+              onChange={(e) => setTelefono(e.target.value)}
+            />
+          </div>
+        </div>       
         <div className="col-md-6">
           <div className="form">
             <label for="account-pass">Contraseña nueva</label>
@@ -103,6 +130,18 @@ const ProfileTabs = () => {
             />
           </div>
         </div>
+        <div className="col-md-12">
+          <div className="form">
+            <label for="account-confirm-pass">Dirección</label>
+            <input
+              className="form-control"
+              type="text"
+              value={direccion}
+              onChange={(e) => setDireccion(e.target.value)}
+            />
+          </div>
+        </div>
+        
         <button type="submit">Actualizar perfil</button>
       </form>
     </>

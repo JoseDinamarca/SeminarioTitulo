@@ -7,10 +7,13 @@ import { register } from "../Redux/Actions/userActions";
 import Header from "./../components/Header";
 
 const Register = ({ location, history }) => {
-  window.scrollTo(0, 0);
+  //window.scrollTo(0, 0);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [direccion, setDireccion] = useState("");
+  const [rut, setRut] = useState("");
 
   const dispatch = useDispatch();
   const redirect = location.search ? location.search.split("=")[1] : "/";
@@ -26,7 +29,7 @@ const Register = ({ location, history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(register(name, email, password));
+    dispatch(register(name, email, password, telefono, direccion, rut));
   };
 
   return (
@@ -42,27 +45,45 @@ const Register = ({ location, history }) => {
         >
           <input
             type="text"
-            placeholder="Username"
+            placeholder="RUT"
+            value={rut}
+            onChange={(e) => setRut(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Nombre de usuario"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Correo electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <input
+            type="text"
+            placeholder="Teléfono"
+            value={telefono}
+            onChange={(e) => setTelefono(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Dirección"
+            value={direccion}
+            onChange={(e) => setDireccion(e.target.value)}
+          />
 
-          <button type="submit">Registrarse</button>
+          <button type="submit">Registrar</button>
           <p>
             <Link to={redirect ? `/login?redirect=${redirect}` : "/login"}>
-              Poseo una cuenta <strong>Iniciar sesión</strong>
+              Ya tengo una cuenta <strong>Login</strong>
             </Link>
           </p>
         </form>
